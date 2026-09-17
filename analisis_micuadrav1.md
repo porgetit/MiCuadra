@@ -1,4 +1,4 @@
-# Documento 1: Análisis Técnico-Económico — MiCuadra (Propuesta Original)
+# Análisis Técnico-Económico — MiCuadra (Propuesta Original)
 
 ---
 
