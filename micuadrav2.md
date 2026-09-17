@@ -1,4 +1,4 @@
-# Documento 2: Pivot — Modelo Híbrido: Directorio Hiperlocal + Red de Mandados
+# Pivot — Modelo Híbrido: Directorio Hiperlocal + Red de Mandados
 
 ---
 
