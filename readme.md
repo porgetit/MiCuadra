@@ -1,118 +1,65 @@
-# Ingestor/Homologador de Facturas Electrónicas XML DIAN
+# 🗺️ MiCuadra
 
-> **"La herramienta más rápida para pasar de un correo con factura electrónica a inventario actualizado. Diseñada para tenderos y comerciantes, no para contadores."**
+### *El mapa vivo de tu cuadra — Directorio hiperlocal + Red de Mandados entre vecinos*
 
----
-
-## 📌 Visión General del Proyecto
-
-Este proyecto es un **ingestor especializado de facturas electrónicas en formato XML (estándar UBL 2.1 de la DIAN en Colombia)**. Su propósito principal es eliminar la carga operativa y el margen de error en el proceso de recepción e ingesta de mercancía para microempresas y PYMEs.
-
-A diferencia de los sistemas ERP tradicionalmente complejos (como Siigo o Alegra), esta solución se enfoca de manera quirúrgica (*hyper-focus*) en:
-
-1. Extraer los datos de compras desde las facturas XML enviadas por los proveedores.
-2. Facilitar una **homologación visual e intuitiva** entre el catálogo del proveedor y el inventario interno del comercio.
-3. Actualizar el stock disponible en un solo clic.
+![Status](https://img.shields.io/badge/Estado-Documentación%20%2F%20Pre--MVP-yellow?style=flat-square)
+![Region](https://img.shields.io/badge/Región-Eje%20Cafetero%2C%20Colombia-green?style=flat-square)
+![License](https://img.shields.io/badge/Licencia-MIT-blue?style=flat-square)
+![Team](https://img.shields.io/badge/Equipo-3%20Estudiantes%20UTP-orange?style=flat-square)
+![Stack](https://img.shields.io/badge/Stack-FastAPI%20%7C%20React%20%7C%20PostgreSQL-informational?style=flat-square)
 
 ---
 
-## 🎯 Mercado Objetivo y Contexto
+## 📌 Descripción del Proyecto
 
-* **Ubicación de Impacto Inicial:** Eje Cafetero, Colombia (Pereira, Risaralda).
-* **Segmento:** Microempresas y PYMEs de hasta 20 empleados.
-* **Tipos de Negocio:** Ferreterías independientes, tiendas de repuestos, minimarkets/abarrotes y pequeñas droguerías.
-* **Volumen de Operación:** Comercio al por menor/mayor con catálogos superiores a 100 referencias de productos.
+**MiCuadra** es una plataforma web y móvil de tipo directorio hiperlocal que resuelve dos problemas simultáneos y complementarios en la economía informal colombiana:
 
----
+1. **Para el negocio de barrio** — barberías, tiendas, panaderías, talleres, gimnasios y fruverías — que hoy son invisibles en internet a pesar de mover economías enteras a nivel de cuadra.
+2. **Para el vecino o estudiante** que necesita un ingreso flexible, o que simplemente no puede salir a hacer una compra.
 
-## 💡 Ventaja Competitiva y Posicionamiento
+La plataforma combina un **directorio geoespacial gratuito** (cualquier negocio aparece en el mapa sin pagar) con una **red colaborativa de "mandados"** ejecutados por vecinos y estudiantes dentro de un radio de 5–10 cuadras. No es una app de domicilios industrial: es infraestructura comunitaria.
 
-En el ecosistema actual existen diversas herramientas:
+> *"Encuentra en segundos los negocios de tu barrio — y si no puedes salir, un vecino va por ti."*
 
-* **Alegra / Siigo Nube:** Centrados en la contabilidad general y administración empresarial, con flujos de trabajo extensos para el registro de compras.
-* **Bsale / QuickBooks Online:** Enfocados en venta de cara al cliente (POS) o contabilidad global sin automatización nativa para compras por XML DIAN.
-* **Tickelia:** Solución dedicada al control de gastos corporativos y viáticos, no a la entrada de inventario comercial.
-
-### **Diferenciales Clave de esta Solución:**
-
-* **Especialización Láser:** No es un ERP genérico; es una herramienta especializada exclusivamente en la ingesta y homologación ágil de compras.
-* **Módulo de Homologación Visual:** Interfaz rápida que permite asociar productos entre el proveedor y el catálogo propio. (Posiblemente mediante *drag-and-drop* o emparejamiento semi-automático)
-* **Ingesta Automática por Correo:** Captura directa de archivos XML mediante buzón de correo integrado.
-* **Precios Asequibles:** Modelo pensado para microempresas, ofreciendo una solución accesible para comercios que no requieren pagar módulos contables complejos.
+El modelo de negocio opera por **micro-comisión por mandado completado**, generando ingresos desde la primera transacción sin requerir que ningún negocio pague una suscripción previa. El proyecto arranca con 2–3 barrios piloto en **Pereira, Risaralda**, con proyección de expansión al Eje Cafetero completo.
 
 ---
 
-## ⚙️ Funcionalidades Principales
+## 📂 Índice de Documentación
 
-* **Parser XML UBL 2.1 (DIAN):** Lectura e interpretación de encabezados, ítems, cantidades, valores unitarios, descuentos e impuestos.
-* **Motor de Homologación de Productos:**
-* Mapeo automático de ítems para proveedores recurrentes previamente asociados.
-* Interfaz visual para la vinculación rápida de productos nuevos.
-
-* **Actualización de Inventario:** Sincronización e incremento automático del stock al confirmar la recepción. (Dependiente de la integración disponible)
-* **Control de Duplicados:** Validación mediante CUFE e identificadores de factura para evitar doble contabilización. (CUFE: Código Único de Facturación Electrónica)
-* **Exportación e Integración:** Exportación de datos estructurados a formatos Excel, CSV o consumo mediante API para sistemas POS locales.
+| Archivo | Tipo | Descripción |
+|---|---|---|
+| [`MiCuadraV1.md`](./micuadrav1.md) | 📋 Concepto Base | Idea original del proyecto: visión, mercado objetivo, funcionalidades, roadmap inicial, arquitectura borrador y modelo de negocio SaaS planteado por el equipo fundador. |
+| [`analisis_micuadrav1.md`](./analisis_micuadrav1.md) | 🔬 Análisis Crítico | Análisis técnico-económico de la propuesta original: viabilidad del stack para un equipo de 3 estudiantes sin capital, evaluación del modelo SaaS vs. psicología del tendero, y matriz de Fortalezas vs. Riesgos. |
+| [`MiCuadraV2.md`](./micuadrav2.md) | 🔄 Propuesta de Pivot | Modelo híbrido: Directorio Hiperlocal + Red de Mandados. Incluye descripción de las dos modalidades de servicio, justificación estratégica del pivot, hoja de ruta técnica por etapas y criterios de validación del MVP antes de activar el motor transaccional. |
+| [`Speech.md`](./speech.md) | 🎤 Elevator Pitch | Guion oficial del pitch (2–3 minutos, ~380 palabras). Estructurado en 6 fases: Problema, Solución, Competencia, Mercado, Ingresos y Equipo. Listo para presentación oral con acotaciones de entonación. |
 
 ---
 
-## 🚀 Roadmap de Desarrollo (Tiempos sujetos a modificaciones)*
+## 🏗️ Pilares de la Plataforma (Modelo Pivot)
 
-El desarrollo se encuentra estructurado en tres fases estratégicas de validación:
+### 🔍 Pilar 1 — Directorio Hiperlocal (Núcleo)
 
-![Diagrama de fases de desarrollo de Invio](/docs/invio-diagrama-de-fases.png)
+| Característica | Detalle |
+|---|---|
+| **Acceso** | Gratuito para negocios y usuarios finales |
+| **Interfaz** | Mapa interactivo con filtros por categoría y cercanía |
+| **Categorías** | Barberías, tiendas, panaderías, talleres, gimnasios, farmacias, fruverías, papelerías |
+| **Perfil de negocio** | Fotos, horarios, catálogo, botón WhatsApp directo |
+| **Registro** | Formulario guiado en 4 pasos, sin conocimientos técnicos |
+| **Cobertura inicial** | 2–3 barrios piloto en Pereira, Risaralda |
 
-### 📦 **Fase 1: Parsing Core (Semanas 1 - 3)**
+### 📦 Pilar 2 — Red de Mandados entre Vecinos
 
-* Construcción del parser en Python para extraer 100% de datos desde facturas XML UBL 2.1 reales.
-* Generación de tablas ordenadas (CSV) y validación de datos con comercios locales en Pereira.
+| Modalidad | Descripción | Comisión plataforma |
+|---|---|---|
+| **A — Comprador Delegado** | El mensajero compra los productos dentro de un presupuesto indicado por el usuario | 8–12% del valor del mandado (mín. $2.000 COP) |
+| **B — Transportista Puro** | El usuario ya compró; el mensajero solo recoge y entrega | $1.500–$3.000 COP fijos |
 
-### 🧪 **Fase 2: Alfa Cerrada (Semanas 4 - 7)**
-
-* Pruebas de campo con 3 a 5 ferreterías del Eje Cafetero.
-* Desarrollo de la interfaz de usuario para homologación manual.
-* Exportación de datos hacia archivos o bases de datos de inventario local.
-
-### 🌐 **Fase 3: Beta Pública (Semanas 8 - 15)**
-
-* Automatización de la ingesta de XML vía correo electrónico (IMAP / OAuth).
-* Motor de homologación semi-automática con aprendizaje de mapeos previos.
-* Integraciones mediante API con sistemas POS locales.
-
----
-
-## 🏗️ Arquitectura Propuesta (Borrador)
-
-* **Backend:** Python 3.10+ (Procesamiento XML con `lxml` / `pandas`, API con FastAPI / Flask).
-* **Frontend:** Framework moderno basado en web (React / Vue) optimizado para interacción ágil.
-* **Base de Datos:** PostgreSQL / SQLite (Almacenamiento de catálogo de productos, proveedores, mapa de homologaciones e historial de facturas procesadas).
+> ⚡ El negocio **nunca paga** para recibir mandados. Los mandados son el canal de adquisición de clientes que el directorio facilita.
 
 ---
 
-## 💼 Modelo de Negocio y Entrega (SaaS)
+## ⚙️ Stack Tecnológico Propuesto
 
-**Invio** opera bajo un modelo de distribución **Software como Servicio (SaaS)** basado en la nube. Esta decisión de arquitectura y negocio responde directamente a 
-las necesidades operativas de los pequeños comerciantes y microempresas, ofreciendo las siguientes ventajas estratégicas:
-
-### 1. Delegación de la Carga Técnica
-El procesamiento y parseo de las facturas electrónicas XML (estándar UBL 2.1 de la DIAN) reside de manera centralizada en la infraestructura del sistema. 
-Los clientes no necesitan instalar, configurar ni mantener un backend local (*Invio Core Parser*). Toda la responsabilidad técnica, la alta disponibilidad y la capacidad 
-de cómputo recaen sobre el operador del servicio.
-
-### 2. Actualizaciones e Integración Regulatoria Transparente
-Dado que la normativa fiscal y los esquemas XML de la DIAN sufren modificaciones periódicas, el modelo SaaS permite aplicar parches de seguridad, optimizaciones del motor 
-de homologación y actualizaciones regulatorias en el servidor de forma inmediata. El usuario final siempre utiliza la versión más reciente y compatible sin requerir intervenciones manuales, 
-descargas o interrupciones en su operación diaria.
-
-### 3. Esquema de Suscripción Asequible y Escalable
-El cobro del servicio se estructura mediante planes de suscripción mensual o anual ajustados al volumen real de facturas procesadas por el negocio, 
-garantizando un costo muy inferior al de un ERP tradicional: (TODO: ajustar todos los precios de este documento a COP)
-
-| Plan | Perfil de Comercio | Volumen Mensual de Facturas | Rango de Precio Estimado |
-|---|---|---|---|
-| **Micro / Inicial** | Pequeños minimarkets / Droguerías | Hasta 30 facturas / mes | $10 - $15 USD / mes |
-| **Pyme Pro** | Ferreterías / Tiendas de repuestos | Hasta 100 facturas / mes | $15 - $25 USD / mes |
-| **Corporativo / Multi-bodega** | Comercio de alto volumen | > 100 facturas / mes | Personalizado |
-
-### 4. Flexibilidad y Accesibilidad
-Al ser una plataforma cloud, los comerciantes pueden acceder a la interfaz de homologación y control de inventario desde cualquier dispositivo con navegador web 
-(computador de escritorio, tablet o smartphone) sin depender de un servidor local en la tienda.
+Diseñado para **costo operativo inicial = $0**, usando capas gratuitas de servicios maduros:
