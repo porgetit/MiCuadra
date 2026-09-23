@@ -26,7 +26,7 @@ El modelo es simple: cobramos una micro-comisión de entre $1.500 y $3.000 pesos
 
 **[Sonrisa, con calma]**
 
-Somos tres estudiantes de la Universidad Tecnológica de Pereira. Uno construye el producto, uno entiende el mercado, uno ejecuta el crecimiento. Conocemos el barrio porque somos del barrio. Y eso, en este negocio, vale más que cualquier oficina.
+Somos tres estudiantes de la Universidad Tecnológica de Pereira. Yo, Kevin Esguerra, quien construye el producto; Andrés Felipe Morales, quien entiende el mercado; y Juan Sebastián Sánchez quien se encarga de ejecutar el crecimiento. Conocemos el barrio porque somos del barrio. Y eso, en este negocio, vale más que cualquier oficina.
 
 **[Pausa final]**
 
